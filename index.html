@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reflection: The Interval of Cracking</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Sarabun:wght@200;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #050505;
+        color: #777;
+        font-family: "Sarabun", sans-serif;
+        line-height: 2.2;
+        letter-spacing: 0.05em;
+      }
+
+      h1,
+      h2,
+      h3,
+      .serif {
+        font-family: "Playfair Display", serif;
+      }
+
+      .grain {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 50;
+        pointer-events: none;
+        opacity: 0.05;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      }
+
+      .section-label {
+        font-size: 0.65rem;
+        letter-spacing: 0.5em;
+        text-transform: uppercase;
+        color: #888; /* ปรับให้ชัดขึ้นตามความต้องการ */
+        display: block;
+        margin-bottom: 1.5rem;
+      }
+
+      .section-title {
+        color: #ccc;
+        font-style: italic;
+        font-size: 1.6rem;
+        margin-bottom: 2.5rem;
+        letter-spacing: 0.1em;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(25px);
+        transition: all 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .highlight-text {
+        color: #f0f0f0;
+        font-weight: 300;
+      }
+
+      .divider {
+        width: 30px;
+        height: 1px;
+        background: #333;
+        margin: 5rem 0;
+      }
+
+      .indent {
+        text-indent: 4rem;
+      }
+
+      .border-box {
+        border: 1px solid rgba(255, 255, 255, 0.03);
+        padding: 3.5rem;
+        margin: 5rem 0;
+        position: relative;
+      }
+
+      .border-box::before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 20px;
+        height: 20px;
+        border-top: 1px solid #333;
+        border-left: 1px solid #333;
+      }
+
+      .faded-text {
+        color: #555;
+        font-style: italic;
+      }
+
+      .manga-texture {
+        background-image: radial-gradient(#1a1a1a 1px, transparent 0);
+        background-size: 8px 8px;
+      }
+
+      /* ส่วนข้อมูลนักศึกษา */
+      .student-info {
+        font-size: 0.7rem;
+        letter-spacing: 0.1em;
+        color: #555;
+        margin-bottom: 5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        padding-top: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grain"></div>
+
+    <nav
+      class="p-12 flex justify-between items-center text-[9px] tracking-[0.6em] uppercase opacity-30 z-40 relative"
+    >
+      <span>Reflection Paper</span>
+      <span>Subject: Happiness Skills</span>
+    </nav>
+
+    <main class="max-w-3xl mx-auto px-8 pb-80">
+      <!-- Hero Section -->
+      <section class="h-[90vh] flex flex-col justify-center">
+        <h1
+          class="text-5xl md:text-7xl highlight-text mb-8 italic leading-tight"
+        >
+          THE INTERVAL <br />OF CRACKING
+        </h1>
+        <p class="text-[11px] tracking-[0.2em] uppercase opacity-40">
+          บันทึกสภาวะกึ่งกลางระหว่างคราบเก่าและจิตวิญญาณใหม่
+        </p>
+        <div class="divider"></div>
+      </section>
+
+      <!-- Student Identification -->
+      <section class="student-info reveal">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div>
+            <span class="block opacity-50 text-[8px] uppercase mb-1"
+              >Name - Surname</span
+            >
+            <p class="highlight-text">นายธนดล อุ่นญาติ</p>
+          </div>
+          <div>
+            <span class="block opacity-50 text-[8px] uppercase mb-1"
+              >Student ID</span
+            >
+            <p class="highlight-text">65010406</p>
+          </div>
+          <div>
+            <span class="block opacity-50 text-[8px] uppercase mb-1"
+              >Faculty</span
+            >
+            <p class="highlight-text">
+              วิศวกรรมไอโอทีและสารสนเทศ และฟิสิกส์อุตสาหกรรม
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Part 1 -->
+      <section class="mb-64 reveal">
+        <span class="section-label">Part 01 : Review</span>
+        <h2 class="section-title">Echoes from the Shadows</h2>
+
+        <div class="space-y-8 font-light text-justify text-md">
+          <p class="indent">
+            ท่ามกลางบรรยากาศอันเงียบสงัดในคาบเรียน ครูถ้อยได้กล่าวถึง
+            <span class="highlight-text">"มรณังสติ"</span>
+            ในมิติที่แตกต่างออกไปจากความเข้าใจทั่วไป
+            มรณังสติมิได้หมายถึงเพียงการระลึกถึงความตายในฐานะปลายทางของชีวิต
+            หากแต่คือการมองเห็นว่า
+            <span class="italic"
+              >ความสิ้นสุดและการเริ่มต้นนั้นดำรงอยู่พร้อมกันในทุกขณะ</span
+            >
+          </p>
+
+          <p>
+            ในบทเรียนมีได้ตั้งคำถามหนึ่งที่เรียบง่าย แต่ชวนสงสัยอย่างประหลาด
+            <span class="italic">“การจากลา...จะไม่เจ็บปวดได้หรือไม่?”</span>
+            คำถามนี้มิได้ต้องการคำตอบที่ถูกต้อง
+            หากแต่ต้องการให้เรามองย้อนเข้าไปในประสบการณ์ของตนเอง
+          </p>
+
+          <p>
+            สำหรับข้าพเจ้า
+            คำถามนั้นกลับเปิดพื้นที่ของความสับสนมากกว่าความกระจ่าง
+            เมื่อพยายามนึกย้อนถึงการสูญเสียบุคคลสำคัญในอดีต สูญเสียของบางชิ้น
+            ข้าพเจ้าจำได้เพียงว่าในวันนั้นมีความเศร้าอยู่จริง
+            แต่สิ่งที่เลือนหายไปคือ
+            <span class="highlight-text">ความรู้สึกที่แท้จริงในเวลานั้น</span>
+            ข้าพเจ้าไม่อาจบอกได้อีกต่อไปว่าตนเองเจ็บปวดเพียงแบบใด
+            หรือรับมือกับมันอย่างไร
+          </p>
+
+          <p>
+            ราวกับว่ากาลเวลาได้ค่อยๆ ลบรายละเอียดของความทรงจำนั้นออกไป
+            เหลือไว้เพียงเงาจางๆ ของเหตุการณ์ที่เคยเกิดขึ้น
+            ความว่างเปล่านี้ทำให้ข้าพเจ้าเริ่มตั้งคำถามว่า
+            การลืมเลือนนั้นคือการเยียวยา
+            หรือเป็นเพียงวิธีที่จิตใจใช้เพื่อปกป้องตนเองกันแน่
+          </p>
+
+          <p>
+            บทเรียนสำคัญที่ข้าพเจ้าได้รับ
+            คือการตระหนักว่ามรณะมิใช่เหตุการณ์ที่รอคอยอยู่เพียงในอนาคต
+            หากแต่ปรากฏอยู่ในทุกช่วงของชีวิต ทุกการเปลี่ยนแปลงเล็ก ๆ
+            ทุกการสิ้นสุดของความคิด ความรู้สึก หรือบทบาทหนึ่งในชีวิต
+            ล้วนเป็นรูปแบบหนึ่งของการ "ตาย" และ "เกิดใหม่"
+          </p>
+
+          <p>
+            เมื่อมองเช่นนี้
+            ชีวิตมิได้เป็นเส้นตรงที่มุ่งไปสู่จุดจบเพียงอย่างเดียว
+            แต่มันคือกระบวนการของการเปลี่ยนผ่านอย่างต่อเนื่อง
+            คล้ายกระแสน้ำที่ไหลไปข้างหน้าโดยไม่เคยหยุดนิ่ง
+          </p>
+        </div>
+      </section>
+
+      <!-- Part 2 -->
+      <section class="mb-64 reveal p-12 manga-texture">
+        <span class="section-label">Part 02 : Reflect</span>
+        <h2 class="section-title">The Molting Ideal</h2>
+
+        <div class="space-y-8 font-light text-md text-justify">
+          <p class="indent">
+            ในบทเรียน ครูได้กล่าวถึงคำของ
+            <span class="highlight-text">โจเซฟ จอห์น แคมป์เบลล์</span>
+            ที่ว่า
+            <span class="italic"
+              >“การเอาชนะความกลัวตาย คือการฟื้นคืนความสุขให้ชีวิต”</span
+            >
+            ประโยคสั้น ๆ นี้ทำให้ข้าพเจ้าครุ่นคิดอยู่นาน
+          </p>
+
+          <p>
+            ข้าพเจ้าใคร่ครวญว่า... หากเรานั้นมิได้กลัวตาย
+            เลิกตั้งคำถามต่อจุดสิ้นสุด
+            แต่จำใจต้องทนรับบาดแผลและดิ้นรนอยู่รอดในทุกครั้งครา
+            สภาวะเช่นนั้นจักบ่งบอกสิ่งใดแก่เรา?
+          </p>
+
+          <p>
+            ข้าพเจ้าผู้เติบโตมากับหน้ากระดาษของหนังสือ เรื่องเล่า
+            และโลกแห่งจินตนาการ มักมองชีวิตผ่านภาพเปรียบเทียบบางอย่างอยู่เสมอ
+            หนึ่งในภาพที่ปรากฏขึ้นในความคิดของข้าพเจ้าคือแนวคิดของการ
+            <span class="highlight-text">“ลอกคราบ”</span>
+          </p>
+
+          <p>
+            การลอกคราบในความหมายที่ข้าพเจ้าจินตนาการไว้
+            มิใช่เพียงการเปลี่ยนแปลงภายนอก แต่คือการค่อย ๆ
+            ปล่อยให้ตัวตนเดิมที่เคยยึดถือหลุดร่วงออกไป
+            เพื่อเปิดพื้นที่ให้การรับรู้แบบใหม่เกิดขึ้น
+          </p>
+
+          <div
+            class="italic py-8 my-8 text-center text-xl text-white/60 border-y border-white/5"
+          >
+            “แต่ภาพที่งดงามนั้นเป็นความจริงของชีวิต
+            หรือเป็นเพียงจินตนาการของคนที่เติบโตมากับเรื่องเล่ากันแน่”
+          </div>
+
+          <p>
+            เมื่อหันกลับมามองความเป็นจริง
+            ข้าพเจ้าพบว่าระยะห่างระหว่างภาพอุดมคตินั้นกับชีวิตจริงยังคงกว้างไกล
+            การปล่อยวางตัวตนไม่ใช่เรื่องที่เกิดขึ้นได้ง่ายอย่างในเรื่องเล่า
+            ในความเป็นจริง เรามักยังคงต้องดิ้นรนเพื่อรักษาบางสิ่งไว้กับตัว
+          </p>
+
+          <p>
+            บางครั้งบาดแผลที่เกิดขึ้นระหว่างทางมิได้ทำให้เรากล้าหาญขึ้นเสมอไป
+            แต่กลับกลายเป็นภาระที่ต้องแบกไว้เงียบๆ
+            จนไม่แน่ใจอีกต่อไปว่าการอยู่รอดนั้นคือชัยชนะ
+            หรือเป็นเพียงการเดินต่อไปโดยไม่รู้ว่าจะวางสิ่งเหล่านั้นลงได้เมื่อใด
+          </p>
+        </div>
+      </section>
+
+      <!-- Part 3 -->
+      <section class="mb-64 reveal">
+        <span class="section-label">Part 03 : Reflexivity</span>
+        <h2 class="section-title">The Unreached Threshold</h2>
+
+        <div
+          class="space-y-10 font-light text-justify border-l border-white/10 pl-10"
+        >
+          <p class="indent">
+            เมื่อพยายามนำบทเรียนเรื่องมรณังสติมาพิจารณาภายในตนเอง
+            ข้าพเจ้าต้องยอมรับอย่างตรงไปตรงมาว่า
+            ในเวลานี้ข้าพเจ้ายังอยู่ห่างไกลจากสภาวะของการ “ลอกคราบ” อย่างแท้จริง
+          </p>
+
+          <p>
+            แม้ในทางความคิด ข้าพเจ้าจะเข้าใจแนวคิดเรื่องการปล่อยวาง
+            แต่ในชีวิตจริง ข้าพเจ้ายังคงติดอยู่กับความต้องการบางอย่าง
+            ไม่ว่าจะเป็นความต้องการการยอมรับ ความต้องการพิสูจน์คุณค่าของตนเอง
+            หรือความพยายามที่จะสร้างที่ทางบางอย่างให้ตัวเองในโลกใบนี้
+          </p>
+
+          <p>
+            ยามที่ต้องระลึกถึงการจากลาที่ดี ที่ทำให้มีความทรงจำที่ดีและเติบโตได้
+            ข้าพเจ้ากลับมิอาจอธิบายหรือนึกภาพนั้นออก
+            ราวกับมีความว่างเปล่ามาแทนที่จนสงสัยว่า
+            สิ่งที่ข้าพเจ้าเป็นอยู่นี้คือการเติบโต หรือแท้จริงแล้วมันคือ
+            <span class="highlight-text"
+              >“กำแพงที่สร้างขึ้นเพื่อปกป้องตัวเอง”</span
+            >
+            จากความเจ็บปวดกันแน่
+          </p>
+
+          <p>
+            กำแพงที่ค่อย ๆ ก่อตัวขึ้นจากประสบการณ์ในอดีต
+            กำแพงที่ทำให้ความทรงจำบางส่วนพร่าเลือน
+            และทำให้ข้าพเจ้ามองการจากลาอย่างสงบเกินกว่าที่ควรจะเป็น
+          </p>
+
+          <div class="border-box">
+            <p class="faded-text mb-6 text-xs uppercase tracking-[0.3em]">
+              Trembling Thoughts :
+            </p>
+
+            <p class="text-white/80 italic leading-relaxed">
+              ข้าพเจ้ามิอาจกล่าวได้ว่าสิ่งที่กำลังเผชิญอยู่นี้คือการเติบโต
+              หรือเป็นเพียงช่วงเวลาของความสับสนที่ยังหาทางออกไม่พบ
+              บางทีความเจ็บปวดที่เกิดขึ้นอาจเป็นสัญญาณของการเปลี่ยนผ่าน
+              แต่ก็อาจเป็นเพียงร่องรอยของบาดแผลที่ยังไม่ได้รับการเยียวยาเช่นกัน
+            </p>
+          </div>
+
+          <p>
+            บทเรียนที่สำคัญที่สุดสำหรับข้าพเจ้า
+            จึงมิใช่การพยายามบรรลุความสงบอย่างสมบูรณ์แบบ
+            แต่คือการยอมรับว่าตนเองยังอยู่ในระหว่างทาง
+          </p>
+
+          <p>
+            ระหว่างคราบเก่าที่ยังไม่หลุดร่วง
+            และตัวตนใหม่ที่ยังไม่ปรากฏขึ้นอย่างชัดเจน
+          </p>
+
+          <p>
+            บางทีการเติบโตอาจไม่ได้หมายถึงการเดินออกจากความสับสนทันที
+            แต่หมายถึงการเรียนรู้ที่จะอยู่ร่วมกับมันอย่างซื่อสัตย์ ยอมรับ และค่อยๆ
+            ก้าวต่อไป แม้จะยังไม่เห็นปลายทางก็ตาม
+          </p>
+        </div>
+      </section>
+
+      <!-- Ending -->
+      <section
+        class="min-h-screen flex flex-col justify-center items-center text-center reveal"
+      >
+        <div
+          class="w-px h-40 bg-gradient-to-b from-white/20 to-transparent mb-16"
+        ></div>
+
+        <h3 class="serif italic text-3xl highlight-text mb-6">
+          Lost in the Path.
+        </h3>
+
+        <p
+          class="max-w-xs text-[10px] leading-loose tracking-[0.2em] uppercase opacity-60"
+        >
+          บางทีความสุขอาจมิใช่การพบคำตอบของชีวิต แต่อาจเป็นเพียงการยอมรับว่า
+          เรายังคงเดินหลงทางอยู่ระหว่างการเปลี่ยนผ่านของตัวตน
+        </p>
+
+        <div class="mt-32 text-[8px] opacity-10 uppercase tracking-[0.5em]">
+          Happiness Class Reflection / Fragmented Work in Progress
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>
